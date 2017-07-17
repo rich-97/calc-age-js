@@ -1,0 +1,25 @@
+{
+  "name": "calc-age",
+  "version": "1.0.0",
+  "description": "A simple function for calculate the age from a date.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rich-97/calc-age-js.git"
+  },
+  "keywords": [
+    "age",
+    "year",
+    "month",
+    "day"
+  ],
+  "author": "Ricardo Moreno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rich-97/calc-age-js/issues"
+  },
+  "homepage": "https://github.com/rich-97/calc-age-js#readme"
+}

@@ -1,5 +1,8 @@
 # calc-age-js
 
+[![npm](https://img.shields.io/npm/v/calc-age.svg)](https://www.npmjs.com/package/calc-age)
+[![npm](https://img.shields.io/npm/dm/calc-age.svg)](https://www.npmjs.com/package/calc-age)
+
 Simple function for calculate the age of a person from a date. This package can calculate the age in years, months and days.
 
 ## Installation

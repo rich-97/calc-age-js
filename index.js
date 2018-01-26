@@ -9,28 +9,13 @@
 
 module.exports = calcAge
 
+const Age = require('./Age')
+
 /* Constants */
+
 const yearInMonths = 12
-const yearInDays = 365
-const monthInDays = yearInDays / yearInMonths
-
-/**
- * Age - Function for build a simple object.
- * (Private function).
- * 
- * @param {Number|String} years
- * @param {Number|String} months
- * @param {Number|String} days
- */
-function Age (years, months, days) {
-  this.years = years
-  this.months = months
-  this.days = days
-}
-
-Age.prototype.toString = function () {
-  return `${this.years} years, ${this.months} months and ${this.days} days`
-}
+const yearInDays   = 365
+const monthInDays  = yearInDays / yearInMonths
 
 /**
  * calcAge - Function for calculate the age from a date.
@@ -41,7 +26,7 @@ Age.prototype.toString = function () {
  *   @property {Number|String} months
  *   @property {Number|String} days
  */
-function calcAge (dateObject) {
+function calcAge(dateObject) {
   // Validation for secure use.
   // When date object is not an object.
   if (typeof dateObject !== 'object') {
@@ -54,7 +39,7 @@ function calcAge (dateObject) {
   }
 
   // Validation for the values of the date object.
-  Object.keys(dateObject).forEach(function (key) {
+  Object.keys(dateObject).forEach(function(key) {
     const value = dateObject[key]
 
     if (typeof value === 'string') {
@@ -64,10 +49,10 @@ function calcAge (dateObject) {
     }
   })
 
-  const currentDate = new Date()
-  const currentYear = currentDate.getFullYear()
+  const currentDate  = new Date()
+  const currentYear  = currentDate.getFullYear()
   const currentMonth = currentDate.getMonth() + 1
-  const currentDay = currentDate.getDate()
+  const currentDay   = currentDate.getDate()
   
   const { year, month, day } = dateObject
   
@@ -88,7 +73,8 @@ function calcAge (dateObject) {
   }
 
   months = (years * yearInMonths) - month
-  days = (years * yearInDays) - (currentMonth * (yearInDays / yearInMonths))
+  days   = (years * yearInDays) - (currentMonth * (yearInDays / yearInMonths))
 
   return new Age(years, months, days)
 }
+
